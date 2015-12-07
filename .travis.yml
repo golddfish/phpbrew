@@ -69,6 +69,7 @@ deploy:
   upload-dir: travis-build/master
   local_dir: build
   skip_cleanup: true
+  detect_encoding: true
   on:
     repo: phpbrew/phpbrew
     branch: 'master'
@@ -81,6 +82,7 @@ deploy:
   upload-dir: travis-build/develop
   local_dir: build
   skip_cleanup: true
+  detect_encoding: true
   on:
     repo: phpbrew/phpbrew
     branch: 'develop'
