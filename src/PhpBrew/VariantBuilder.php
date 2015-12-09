@@ -5,6 +5,42 @@ use Exception;
 use RuntimeException;
 use PhpBrew\Exception\OopsException;
 use PhpBrew\Build;
+use PhpBrew\VariantCollection;
+use PhpBrew\Variant;
+
+use ArrayAccess;
+use IteratorAggregate;
+use ArrayIterator;
+
+class PHP5VariantDefinition extends VariantCollection
+{
+
+    public function init()
+    {
+        $this->variant('phar')
+            ->desc('phar support')
+            ->optionName('--enable-phar')
+            ;
+
+        $this->variant('session')
+            ->desc('enable session support')
+            ->optionName('--enable-session')
+            ;
+
+        $this->variant('zlib')
+            ->desc('enable zlib support')
+            ->optionName('--with-zlib')
+            ->defaultOption(function(Build $build) {
+                if ($prefix = Utils::findIncludePrefix('zlib.h')) {
+                    return $prefix;
+                }
+            })
+            ;
+
+    }
+
+}
+
 
 /**
  * VariantBuilder build variants to configure options.
