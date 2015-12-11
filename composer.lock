@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e2fa52b374e3449d6eb155e0686c5127",
-    "content-hash": "9d680ca021fec7a4b12ebd5c48ba538f",
+    "hash": "7cc724b68ad0e87e5d05e4611c573557",
+    "content-hash": "ebd2fb467a4be799d5c20a8d77eab1db",
     "packages": [
         {
             "name": "corneltek/cachekit",
@@ -372,6 +372,44 @@
             "description": "Universal library for PHP",
             "homepage": "http://github.com/c9s/Universal",
             "time": "2015-11-07 10:32:02"
+        },
+        {
+            "name": "corneltek/versionkit",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/c9s/VersionKit.git",
+                "reference": "cb944475bc182dce3b38ab967e5c60cec9dd900a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/c9s/VersionKit/zipball/cb944475bc182dce3b38ab967e5c60cec9dd900a",
+                "reference": "cb944475bc182dce3b38ab967e5c60cec9dd900a",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VersionKit\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "c9s",
+                    "email": "cornelius.howl@gmail.com"
+                }
+            ],
+            "description": "Versioning library",
+            "time": "2015-12-11 10:58:18"
         },
         {
             "name": "doctrine/inflector",
@@ -779,6 +817,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "corneltek/cliframework": 20,
+        "corneltek/versionkit": 20,
         "corneltek/pearx": 20,
         "corneltek/phpunit-testmore": 20
     },
