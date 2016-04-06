@@ -161,7 +161,7 @@ class ReleaseList
                 'openssl extension not found, to download releases file you need openssl.');
         }
 
-        $max = ($options && $options->old) ? 1000 : 100;
+        $max = ($options && $options->old) ? 1000 : 150;
         $url = "https://secure.php.net/releases/index.php?json&version={$version}&max={$max}";
 
         if (extension_loaded('curl')) {
